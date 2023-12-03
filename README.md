@@ -30,18 +30,19 @@ Frontend Mentor challenges help you improve your coding skills by building reali
   - The card
     - Two containers inside the card, one for the image, one for the text 
   - Card image, picture element 
-      '''html
-      <picture>
-          <!-- largest image -->
-          <source srcset="/media/images/decorative-image-3.jpg"
-            media="(min-width: 60rem)">
-          <!-- medium image -->
-          <source srcset="/media/images/decorative-image-2.jpg"
-            media="(min-width: 40rem)">
-          <!-- smallest image (default) -->
-          <img src="/media/images/decorative-image-1.jpg" alt="">
-      </picture>
-      '''
+
+```html
+<picture>
+    <!-- largest image -->
+    <source srcset="/media/images/decorative-image-3.jpg"
+      media="(min-width: 60rem)">
+    <!-- medium image -->
+    <source srcset="/media/images/decorative-image-2.jpg"
+      media="(min-width: 40rem)">
+    <!-- smallest image (default) -->
+    <img src="/media/images/decorative-image-1.jpg" alt="">
+</picture>
+```
 
 
 ### The challenge
