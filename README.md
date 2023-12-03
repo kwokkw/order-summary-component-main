@@ -24,12 +24,12 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 ## Overview
 
+How to plan your HTML (1): Product Preview Card - [Grace Snow](https://fedmentor.dev/posts/html-plan-product-preview/)
 - Build out a order summary card component
-- What I see
   - Landmarks (main, footer)
   - The card
     - Two containers inside the card, one for the image, one for the text 
-  - Card image, picture element 
+  - Card image, [picture element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) 
 
 ```html
 <picture>
