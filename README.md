@@ -123,4 +123,5 @@ This is where you can give a hat tip to anyone who helped you out on this projec
 
 ## Time estimate
 
-Start at 2:35pm on 12/2/2023 - 1hr 20mins
+Start at 2:35pm on 12/2/2023
+Finished at 22:41pm on 12/5/2023 

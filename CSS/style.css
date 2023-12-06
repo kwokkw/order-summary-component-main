@@ -1,24 +1,234 @@
-/**************************************
+/* || RESET */
 
-## Colors
+/* setting all elements and pseudo-elements to use the border-box */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-### Primary
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
 
-- Pale blue: hsl(225, 100%, 94%)
-- Bright blue: hsl(245, 75%, 52%)
+/* Remove default margin in favour of better control in authored CSS */
+/* body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+} */
 
-### Neutral
+img {
+    display: block;
+    max-width: 100%;
+}
 
-- Very pale blue: hsl(225, 100%, 98%)
-- Desaturated blue: hsl(224, 23%, 55%)
-- Dark blue: hsl(223, 47%, 23%) 
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
 
-****************************************/
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
 
-/****************************************
+/* Set core body defaults */ 
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
 
-### Body Copy
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
 
-- Font size (paragraph): 16px 
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
 
-*****************************************/
+/* || VARIABLES */
+
+:root {
+    /* COLOR */
+    --bg-color: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --card-bg-color: hsl(225, 100%, 98%);
+    --font-blue: hsl(224, 23%, 55%);
+    --heading-color: hsl(223, 47%, 23%); 
+
+    /* FONT SIZE*/
+    --fs: 1rem;
+    --heading-fs: 1.5rem;
+    
+    /* FONT WEIGHT */
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+
+    /* BORDERS */
+    --border-radius: 1.25rem;
+}
+
+/* || GENERAL STYLES */
+
+html {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: var(--fs);
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: var(--font-blue);
+}
+
+/* || BLOCKS */
+
+.order-summary-card {
+    margin: 3.125rem auto;
+    max-width: 21rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.attribution {
+    font-size: small;
+    text-align: center;
+}
+
+.card-text-container {
+    background-color: var(--card-bg-color);
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    font-weight: var(--fw-500);
+    padding: 2rem 2rem 2rem 2rem;
+    row-gap: 1.5rem;
+}
+
+.card-plan-container {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+/* || ELEMENTS */
+
+h1 {
+    font-weight: var(--fw-900);
+    font-size: var(--heading-fs);
+    color: var(--heading-color);
+}
+
+.cancel {
+    color: var(--font-blue);
+}
+
+.card-plan-container p {
+    padding-left: 1rem;
+    padding-right: 2.5rem;
+}
+
+.card-text-container a {
+    display: block;
+    text-decoration: none;
+    font-weight: var(--fw-900);
+}
+
+img {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.card-text-container .link-change {
+    text-decoration: underline;
+}
+
+.payment {
+    background-color: var(--bright-blue);
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 0.7rem;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.card-text-container .plan-text {
+    color: var(--heading-color);
+    font-weight: var(--fw-900);
+}
+
+/* || MEDIA QUERIES */
+
+@media screen and (min-width: 48rem) {
+    body {
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: grid;
+        place-content: center;
+    }
+
+    .order-summary-card {
+        max-width: 25rem;
+    }
+
+    .card-text-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.5rem;
+    }
+
+    .card-plan-container p {
+        padding-left: 1.5rem;
+        padding-right: 6rem;
+    }
+
+    span {
+        display: block;
+    }
+
+    /* || LINKS */
+
+    .link-change:active {
+        color: hsl(245, 75%, 65%);
+        text-decoration: none;
+    } 
+
+    .payment:active {
+        background-color: hsl(245, 75%, 65%);
+    }
+
+    .cancel:active {
+        color: hsl(224, 23%, 25%);
+    }
+
+    .link-change:hover {
+        color: hsl(245, 75%, 65%);
+        text-decoration: none;
+    } 
+
+    .payment:hover {
+        background-color: hsl(245, 75%, 65%);
+    }
+
+    .cancel:hover {
+        color: hsl(224, 23%, 25%);
+    }
+}
