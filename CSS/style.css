@@ -126,7 +126,6 @@ body {
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
 }
 
 /* || ELEMENTS */
@@ -146,6 +145,10 @@ h1 {
     padding-right: 2.5rem;
 }
 
+.card-plan-container:first-child {
+    font-weight: fw;
+}
+
 .card-text-container a {
     display: block;
     text-decoration: none;
@@ -156,8 +159,11 @@ img {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
-.card-text-container .link-change {
+.card-plan-container button {
     text-decoration: underline;
+    color: var(--bright-blue);
+    border: none;
+    background-color: var(--card-bg-color);
 }
 
 .payment {
@@ -169,7 +175,7 @@ img {
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-.card-text-container .plan-text {
+.card-text-container .card-plan_plan {
     color: var(--heading-color);
     font-weight: var(--fw-900);
 }
@@ -206,7 +212,7 @@ img {
 
     /* || LINKS */
 
-    .link-change:active {
+    button:active {
         color: hsl(245, 75%, 65%);
         text-decoration: none;
     } 
@@ -219,7 +225,7 @@ img {
         color: hsl(224, 23%, 25%);
     }
 
-    .link-change:hover {
+    button:hover {
         color: hsl(245, 75%, 65%);
         text-decoration: none;
     } 

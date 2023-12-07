@@ -11,6 +11,8 @@ This is my solution to the [Order summary card challenge on Frontend Mentor](htt
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Acknowledgments](#acknowledgments)
   - [Time estimate](#time-estimate)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
@@ -64,6 +66,14 @@ Users should be able to:
   - flexbox (possibly CSS grid)
   - heading order
   - mobile-first styling
+
+### What I learned
+
+If the images on the page are purely decorative and don't add meaningful content to the page, it's appropriate to leave the alt attribute empty `alt=""`. This signifies that the image is decorative, and it allows assistive technologies like screen readers to ignore the image, reducing unnecessary noise for users who rely on those technologies.
+
+### Acknowledgments
+
+[Melvin Aguilar](https://www.frontendmentor.io/profile/MelvinAguilar)
 
 ## Time estimate
 
